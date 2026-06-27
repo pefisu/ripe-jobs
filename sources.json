@@ -1,0 +1,123 @@
+{
+  "last_reviewed": "2026-06-27",
+  "candidate_focus": [
+    "medical tourism",
+    "dental tourism",
+    "international patient coordination",
+    "clinic coordination",
+    "clinic operations",
+    "English-speaking sales",
+    "CRM and customer success",
+    "remote or hybrid roles"
+  ],
+  "sources": [
+    {
+      "name": "Dentalilan - clinic coordinator / manager",
+      "url": "https://dentalilan.com/isveren-ilanlari/klinik-yoneticisi-koordinatoru-araniyor",
+      "category": "dental_tourism",
+      "access": "browser_assisted",
+      "notes": "Core niche source, but GitHub Actions was blocked by Cloudflare. Use when accessible from Codex web search or the owner's browser."
+    },
+    {
+      "name": "Dentalilan - health tourism translator / specialist",
+      "url": "https://dentalilan.com/isveren-ilanlari/saglik-turizmi-tercumani-araniyor",
+      "category": "dental_tourism",
+      "access": "browser_assisted",
+      "notes": "Best source for English-speaking dental tourism listings, but not reliable for server-side scraping."
+    },
+    {
+      "name": "Kariyer.net - sağlık turizmi Istanbul",
+      "url": "https://www.kariyer.net/is-ilanlari?kw=sa%C4%9Fl%C4%B1k%20turizmi&ct=34",
+      "category": "medical_tourism",
+      "access": "direct_or_browser",
+      "notes": "Direct access returned a readable page on 2026-06-27. Search variants should include hasta koordinatörü, international patient, medical tourism, CRM, and sales."
+    },
+    {
+      "name": "Kariyer.net - hasta koordinatörü Istanbul",
+      "url": "https://www.kariyer.net/is-ilanlari?kw=hasta%20koordinat%C3%B6r%C3%BC&ct=34",
+      "category": "medical_tourism",
+      "access": "direct_or_browser",
+      "notes": "Useful broader patient-coordination search."
+    },
+    {
+      "name": "Kariyer.net - remote English customer success Turkey",
+      "url": "https://www.kariyer.net/is-ilanlari?kw=customer%20success%20english",
+      "category": "remote_hybrid",
+      "access": "direct_or_browser",
+      "notes": "Use for non-healthcare remote/hybrid roles that fit English, CRM, sales, and international client skills."
+    },
+    {
+      "name": "Eleman.net - sağlık turizmi Istanbul",
+      "url": "https://www.eleman.net/is-ilanlari?kelime=sa%C4%9Fl%C4%B1k%20turizmi&il=istanbul",
+      "category": "medical_tourism",
+      "access": "direct_or_browser",
+      "notes": "Direct access returned a readable page on 2026-06-27."
+    },
+    {
+      "name": "LinkedIn Jobs - health tourism coordinator Istanbul",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=health%20tourism%20coordinator&location=Istanbul%2C%20Turkey",
+      "category": "medical_tourism",
+      "access": "browser_assisted",
+      "notes": "Public search page returned from Codex on 2026-06-27. Better results may require the owner's logged-in browser."
+    },
+    {
+      "name": "LinkedIn Jobs - international patient coordinator Istanbul",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=international%20patient%20coordinator&location=Istanbul%2C%20Turkey",
+      "category": "medical_tourism",
+      "access": "browser_assisted",
+      "notes": "Strong query for broader medical tourism roles."
+    },
+    {
+      "name": "LinkedIn Jobs - remote customer success Turkey",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=remote%20customer%20success%20english&location=Turkey",
+      "category": "remote_hybrid",
+      "access": "browser_assisted",
+      "notes": "Good for hybrid/remote alternatives outside healthcare."
+    },
+    {
+      "name": "Indeed Turkey - sağlık turizmi Istanbul",
+      "url": "https://tr.indeed.com/jobs?q=sa%C4%9Fl%C4%B1k+turizmi&l=%C4%B0stanbul",
+      "category": "medical_tourism",
+      "access": "browser_only",
+      "notes": "Returned 403/Cloudflare from Codex on 2026-06-27."
+    },
+    {
+      "name": "Yenibiris - sağlık turizmi Istanbul",
+      "url": "https://www.yenibiris.com/is-ilanlari?q=sa%C4%9Fl%C4%B1k%20turizmi&l=istanbul",
+      "category": "medical_tourism",
+      "access": "browser_only",
+      "notes": "Returned unavailable/410-style response from Codex on 2026-06-27."
+    }
+  ],
+  "company_targets": [
+    "Acibadem",
+    "Medical Park",
+    "Memorial",
+    "Florence Nightingale",
+    "Esteworld",
+    "Vera Clinic",
+    "Dentakay",
+    "DentSpa",
+    "Turkeyana Clinic",
+    "ClinicExpert",
+    "Smile Hair Clinic",
+    "EsteNove",
+    "HairNeva"
+  ],
+  "keywords": [
+    "sağlık turizmi uzmanı İstanbul İngilizce",
+    "sağlık turizmi satış danışmanı İstanbul İngilizce",
+    "uluslararası hasta koordinatörü İstanbul",
+    "international patient coordinator Istanbul",
+    "medical tourism coordinator Istanbul",
+    "health tourism specialist Istanbul",
+    "hasta koordinatörü İngilizce İstanbul",
+    "klinik koordinatörü İstanbul İngilizce",
+    "clinic coordinator Istanbul English",
+    "clinic manager Istanbul English",
+    "customer success remote English Turkey",
+    "sales coordinator remote English Turkey",
+    "CRM specialist remote English Turkey",
+    "patient coordinator remote English"
+  ]
+}
