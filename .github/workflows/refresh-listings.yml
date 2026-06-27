@@ -1,8 +1,12 @@
-name: Refresh Nihal job listings
+name: Refresh Nihal job listings (DISABLED)
 
+# Disabled 2026-06-27: dentalilan.com sits behind a Cloudflare bot challenge
+# that no headless/server-side fetch can pass (tried plain curl, Playwright,
+# patchright stealth, all blocked). Refreshes now happen locally via the
+# refresh-nihal-jobs skill on the owner's Mac, which uses real Chrome.
+# Keeping the file (with manual-only trigger) so the workflow exists for
+# emergency manual runs if Cloudflare ever relaxes; remove if no longer needed.
 on:
-  schedule:
-    - cron: "0 6 * * 1"   # every Monday 06:00 UTC (~09:00 Istanbul)
   workflow_dispatch: {}
 
 permissions:
