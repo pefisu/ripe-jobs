@@ -182,6 +182,8 @@ body{margin:0}
 <div class="tags fx">
 <span class="tag">{{ j.postedLabel }}</span>
 <span class="tag">{{ j.mode }}</span>
+<span class="tag">{{ j.employmentLabel }}</span>
+<sc-if value="{{ j.aiPrimary }}" hint-placeholder-val="{{ false }}"><span class="tag">AI-first</span></sc-if>
 <sc-if value="{{ j.hasLang }}" hint-placeholder-val="{{ false }}"><span class="tag">{{ j.langLabel }}</span></sc-if>
 </div>
 <a class="link" href="{{ j.url }}" target="_blank" rel="noopener">View posting →</a>
@@ -267,16 +269,16 @@ class Component extends DCLogic {
   "snapshot_date": "2026-06-30",
   "source": "Dribbble, Remotive, Remote OK",
   "jobs": [
-    {"title":"Senior Motion Designer","clinic":"Bone Studio","district":"Remote","posted":"2026-06-20","lang":"English likely","mode":"Remote","fit":"strong","why":"This is the cleanest match I found: a current Dribbble posting with motion design as the core role. It should let you lead with craft, timing, brand/product storytelling, and polished moving-image systems.","url":"https://dribbble.com/jobs/307865-Senior-Motion-Designer"},
-    {"title":"Senior Graphic Designer w/ Motion","clinic":"Nice Wolf Pty Ltd","district":"Remote","posted":"2026-05-03","lang":"English likely","mode":"Remote","fit":"strong","why":"A strong fit if you want the motion work to live inside a wider visual-design practice. The motion requirement is explicit, and the seniority gives you room to bring art direction, systems thinking, and animation craft together.","url":"https://dribbble.com/jobs/305819-Senior-Graphic-Designer-w-Motion"},
-    {"title":"Mid/Senior AI Cinematic Video Editor","clinic":"EverAI","district":"Worldwide","posted":"2026-06-24","lang":"English","mode":"Remote","fit":"strong","why":"This is a very relevant AI-era motion/video lane: cinematic editing, video production, and After Effects are all called out by the posting. It fits your interest in AI-assisted creative workflows while staying close to moving-image craft.","url":"https://remotive.com/remote-jobs/artificial-intelligence/mid-senior-ai-cinematic-video-editor-2091035"},
-    {"title":"AI Filmmaker","clinic":"Foxelli Group","district":"Remote","posted":"2026-06-27","lang":"English likely","mode":"Remote","fit":"good","why":"A good experimental fit if you want to keep building toward AI-assisted motion, product films, and fast creative production. It may skew more filmmaker/content than pure motion design, but the direction is very current.","url":"https://remoteok.com/remote-jobs/remote-ai-filmmaker-foxelli-group-1134232"},
-    {"title":"Video Editor","clinic":"OnlineJobs.PH","district":"Remote","posted":"2026-06-27","lang":"English likely","mode":"Remote","fit":"good","why":"This is a practical moving-image role and useful if you want current paid editing work while sharpening the motion-design portfolio. It is less brand-system led than a true motion designer role, so I would treat it as a solid backup.","url":"https://remoteok.com/remote-jobs/remote-video-editor-onlinejobs-ph-1134184"},
-    {"title":"Manager Social Art Director","clinic":"Starface World","district":"Remote","posted":"2026-06-26","lang":"English likely","mode":"Remote","fit":"good","why":"This is adjacent rather than pure motion, but the social art-direction angle could use your taste for campaigns, visual systems, and moving content. It is worth scanning if you want a more senior creative direction route.","url":"https://remoteok.com/remote-jobs/remote-manager-social-art-director-starface-world-1134222"},
-    {"title":"Art Director Brand & Concepts","clinic":"Stio","district":"Remote","posted":"2026-06-26","lang":"English likely","mode":"Remote","fit":"good","why":"A brand/concepts role can be a strong portfolio step if the team needs launch assets, campaign systems, and motion-friendly storytelling. It is more art direction than animator seat, so the fit depends on how much execution they expect from you.","url":"https://remoteok.com/remote-jobs/remote-art-director-brand-amp-concepts-stior-1134215"},
-    {"title":"Freelance Senior Presentation Designer","clinic":"Article Group","district":"Remote","posted":"2026-06-02","lang":"English likely","mode":"Remote","fit":"maybe","why":"This is not a motion role, but senior presentation work can still reward systems thinking, storytelling, and polished visual rhythm. Treat it as a freelance fallback if the brief allows animation, product narratives, or keynote-style motion.","url":"https://dribbble.com/jobs/307239-Freelance-Senior-Presentation-Designer"},
-    {"title":"Freelance Associate Creative Director","clinic":"Article Group","district":"Remote","posted":"2026-06-02","lang":"English likely","mode":"Remote","fit":"maybe","why":"This is a senior creative-direction stretch rather than a hands-on motion role. It could fit if the work is campaign/storytelling heavy, but only prioritise it if you want to pitch yourself above execution.","url":"https://dribbble.com/jobs/307238-Freelance-Associate-Creative-Director"},
-    {"title":"Graphic Designer","clinic":"Digital Executive","district":"Remote","posted":"2026-06-26","lang":"English likely","mode":"Remote","fit":"maybe","why":"This is the broadest fallback in the set. It may help if you need a general design opening, but it is only worth your time if the role includes motion, video, campaign assets, or a route into brand systems.","url":"https://remoteok.com/remote-jobs/remote-graphic-designer-digital-executive-1134223"}
+    {"title":"Senior Motion Designer","clinic":"Bone Studio","district":"Remote","posted":"2026-06-20","lang":"English likely","mode":"Remote","employment":"Salaried","ai_primary":false,"fit":"strong","why":"This is the cleanest match I found: a current Dribbble posting with motion design as the core role. It should let you lead with craft, timing, brand/product storytelling, and polished moving-image systems.","url":"https://dribbble.com/jobs/307865-Senior-Motion-Designer"},
+    {"title":"Senior Graphic Designer w/ Motion","clinic":"Nice Wolf Pty Ltd","district":"Remote","posted":"2026-05-03","lang":"English likely","mode":"Remote","employment":"Salaried","ai_primary":false,"fit":"strong","why":"A strong fit if you want the motion work to live inside a wider visual-design practice. The motion requirement is explicit, and the seniority gives you room to bring art direction, systems thinking, and animation craft together.","url":"https://dribbble.com/jobs/305819-Senior-Graphic-Designer-w-Motion"},
+    {"title":"Mid/Senior AI Cinematic Video Editor","clinic":"EverAI","district":"Worldwide","posted":"2026-06-24","lang":"English","mode":"Remote","employment":"Salaried","ai_primary":true,"fit":"strong","why":"This is a very relevant AI-era motion/video lane: cinematic editing, video production, and After Effects are all called out by the posting. It fits your interest in AI-assisted creative workflows while staying close to moving-image craft.","url":"https://remotive.com/remote-jobs/artificial-intelligence/mid-senior-ai-cinematic-video-editor-2091035"},
+    {"title":"AI Filmmaker","clinic":"Foxelli Group","district":"Remote","posted":"2026-06-27","lang":"English likely","mode":"Remote","employment":"Salaried","ai_primary":true,"fit":"good","why":"A good experimental fit if you want to keep building toward AI-assisted motion, product films, and fast creative production. It may skew more filmmaker/content than pure motion design, but the direction is very current.","url":"https://remoteok.com/remote-jobs/remote-ai-filmmaker-foxelli-group-1134232"},
+    {"title":"Video Editor","clinic":"OnlineJobs.PH","district":"Remote","posted":"2026-06-27","lang":"English likely","mode":"Remote","employment":"Salaried","ai_primary":false,"fit":"good","why":"This is a practical moving-image role and useful if you want current paid editing work while sharpening the motion-design portfolio. It is less brand-system led than a true motion designer role, so I would treat it as a solid backup.","url":"https://remoteok.com/remote-jobs/remote-video-editor-onlinejobs-ph-1134184"},
+    {"title":"Manager Social Art Director","clinic":"Starface World","district":"Remote","posted":"2026-06-26","lang":"English likely","mode":"Remote","employment":"Salaried","ai_primary":false,"fit":"good","why":"This is adjacent rather than pure motion, but the social art-direction angle could use your taste for campaigns, visual systems, and moving content. It is worth scanning if you want a more senior creative direction route.","url":"https://remoteok.com/remote-jobs/remote-manager-social-art-director-starface-world-1134222"},
+    {"title":"Art Director Brand & Concepts","clinic":"Stio","district":"Remote","posted":"2026-06-26","lang":"English likely","mode":"Remote","employment":"Salaried","ai_primary":false,"fit":"good","why":"A brand/concepts role can be a strong portfolio step if the team needs launch assets, campaign systems, and motion-friendly storytelling. It is more art direction than animator seat, so the fit depends on how much execution they expect from you.","url":"https://remoteok.com/remote-jobs/remote-art-director-brand-amp-concepts-stior-1134215"},
+    {"title":"Freelance Senior Presentation Designer","clinic":"Article Group","district":"Remote","posted":"2026-06-02","lang":"English likely","mode":"Remote","employment":"Freelance","ai_primary":false,"fit":"maybe","why":"This is not a motion role, but senior presentation work can still reward systems thinking, storytelling, and polished visual rhythm. Treat it as a freelance fallback if the brief allows animation, product narratives, or keynote-style motion.","url":"https://dribbble.com/jobs/307239-Freelance-Senior-Presentation-Designer"},
+    {"title":"Freelance Associate Creative Director","clinic":"Article Group","district":"Remote","posted":"2026-06-02","lang":"English likely","mode":"Remote","employment":"Freelance","ai_primary":false,"fit":"maybe","why":"This is a senior creative-direction stretch rather than a hands-on motion role. It could fit if the work is campaign/storytelling heavy, but only prioritise it if you want to pitch yourself above execution.","url":"https://dribbble.com/jobs/307238-Freelance-Associate-Creative-Director"},
+    {"title":"Graphic Designer","clinic":"Digital Executive","district":"Remote","posted":"2026-06-26","lang":"English likely","mode":"Remote","employment":"Salaried","ai_primary":false,"fit":"maybe","why":"This is the broadest fallback in the set. It may help if you need a general design opening, but it is only worth your time if the role includes motion, video, campaign assets, or a route into brand systems.","url":"https://remoteok.com/remote-jobs/remote-graphic-designer-digital-executive-1134223"}
   ]
 }`;
 
@@ -288,12 +290,12 @@ class Component extends DCLogic {
   ];
 
   fitMeta = {
-    strong:{label:'High signal', cls:'fit-strong', color:'#ff5a1f', order:0},
-    good:{label:'Good fit', cls:'fit-good', color:'#171717', order:1},
-    maybe:{label:'Explore', cls:'fit-maybe', color:'#8f8d84', order:2},
+    strong:{label:'Best match', cls:'fit-strong', color:'#ff5a1f', order:0},
+    good:{label:'Good match', cls:'fit-good', color:'#171717', order:1},
+    maybe:{label:'Backup', cls:'fit-maybe', color:'#8f8d84', order:2},
   };
 
-  filterDefs = ['High signal','Good fit','Explore','Speaks English','Remote','Hybrid','On-site'];
+  filterDefs = ['Best match','Good match','Backup','Freelance','Salaried','AI-first','Remote','Hybrid','On-site'];
 
   componentDidMount(){
     let init;
@@ -328,11 +330,13 @@ class Component extends DCLogic {
     const q = this.state.query.trim().toLowerCase();
     if (q && !([j.title, j.clinic, j.district, j.why].join(' ').toLowerCase().includes(q))) return false;
     const fitSel = [];
-    if (this.state.types['High signal']) fitSel.push('strong');
-    if (this.state.types['Good fit']) fitSel.push('good');
-    if (this.state.types['Explore']) fitSel.push('maybe');
+    if (this.state.types['Best match']) fitSel.push('strong');
+    if (this.state.types['Good match']) fitSel.push('good');
+    if (this.state.types['Backup']) fitSel.push('maybe');
     if (fitSel.length && !fitSel.includes(j.fit)) return false;
-    if (this.state.types['Speaks English'] && !/english/i.test(j.lang || '')) return false;
+    const employmentSel = ['Freelance','Salaried'].filter(e => this.state.types[e]);
+    if (employmentSel.length && !employmentSel.includes(j.employment || 'Salaried')) return false;
+    if (this.state.types['AI-first'] && !j.ai_primary) return false;
     const modeSel = ['Remote','Hybrid','On-site'].filter(m => this.state.types[m]);
     if (modeSel.length && !modeSel.includes(j.mode || 'On-site')) return false;
     return true;
@@ -355,6 +359,8 @@ class Component extends DCLogic {
           initial: (j.clinic || '?').replace(/[^A-Za-zÇĞİÖŞÜ]/,'').charAt(0).toUpperCase() || (j.clinic||'?')[0],
           color: fm.color, fitLabel: fm.label, fitCls: fm.cls,
           mode: j.mode || 'On-site',
+          employmentLabel: j.employment || 'Salaried',
+          aiPrimary: !!j.ai_primary,
           postedLabel: this.postedLabel(j.posted, snap),
           hasLang: !!(j.lang && j.lang.trim()), langLabel: j.lang,
           savedCls: (j.id in t) ? 'on' : '',
