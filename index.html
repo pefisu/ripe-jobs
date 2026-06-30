@@ -17,103 +17,130 @@
 body{margin:0}
 .fx{display:flex}.ac{align-items:center}.jb{justify-content:space-between}.col{flex-direction:column}.f1{flex:1}
 .gap10{gap:10px}.gap16{gap:16px}
+:root{--bg:#f6f6f3;--ink:#171717;--muted:#77756e;--orange:#ff5a1f;--orange-deep:#d84315;--orange-soft:#fff0e8;--grey:#ecece7;--grey2:#deded7;--green:#6d9f71;--line:#dfdfd8;--card:#ffffff;--panel:#fbfbf8}
 .app{min-height:100vh;background:var(--bg);font-family:'Hanken Grotesk',system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
-:root{--bg:#fff8f7;--ink:#241a1c;--muted:#9a888b;--red:#e3637a;--red-deep:#c33a55;--pink:#ffeef1;--pink2:#fcdce2;--leaf:#6fae71;--line:#f3e6e8;--card:#ffffff}
 .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
-.hd{position:sticky;top:0;z-index:20;background:rgba(255,248,247,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd{position:sticky;top:0;z-index:20;background:rgba(246,246,243,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .hdin{height:68px}
-.brand{letter-spacing:-.02em}
-.berry{width:26px;height:28px;position:relative;display:inline-block}
-.berry-b{position:absolute;left:2px;bottom:0;width:22px;height:21px;background:var(--red);border-radius:50% 50% 48% 48%/42% 42% 58% 58%;box-shadow:inset 0 -3px 6px rgba(0,0,0,.06)}
-.berry-l{position:absolute;left:8px;top:0;width:10px;height:8px;background:var(--leaf);border-radius:60% 60% 20% 20%;transform:rotate(-6deg)}
-.seed{position:absolute;width:2px;height:3px;background:#fff7;border-radius:50%}
+.brand{letter-spacing:.02em;text-transform:lowercase}
+.device{width:34px;height:24px;border:2px solid var(--ink);border-radius:5px;background:var(--orange);position:relative;display:inline-block;box-shadow:inset 0 0 0 2px rgba(255,255,255,.35)}
+.device::before{content:"";position:absolute;left:5px;top:6px;width:6px;height:6px;border-radius:50%;background:#fff;border:1px solid var(--ink)}
+.device::after{content:"";position:absolute;right:5px;top:7px;width:10px;height:3px;background:var(--ink);box-shadow:0 5px 0 var(--ink)}
 .nav{gap:4px}
 .navlink{padding:8px 14px;border-radius:999px;font-weight:600;font-size:14px;color:var(--muted);cursor:pointer;border:none;background:none;font-family:inherit;transition:.15s}
 .navlink:hover{color:var(--ink)}
 .navlink.on{background:var(--ink);color:#fff}
-.avatar{width:34px;height:34px;border-radius:50%;background:var(--pink2);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:var(--red-deep)}
+.avatar{width:34px;height:34px;border-radius:50%;background:var(--grey);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:var(--ink)}
 .hero{padding:48px 0 8px}
 .h1{font-size:40px;line-height:1.06;font-weight:800;letter-spacing:-.03em;margin:0 0 12px;max-width:680px}
-.h1 em{font-style:normal;color:var(--red-deep)}
+.h1 em{font-style:normal;color:var(--orange-deep)}
 .sub{font-size:16px;color:var(--muted);max-width:620px;margin:0 0 26px;line-height:1.55}
-.search{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:6px 6px 6px 18px;max-width:560px;box-shadow:0 6px 24px -16px rgba(195,58,85,.4)}
+.search{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 6px 6px 18px;max-width:560px;box-shadow:0 12px 34px -28px rgba(0,0,0,.32)}
 .search input{flex:1;border:none;outline:none;font-family:inherit;font-size:15px;background:none;color:var(--ink);padding:10px 0}
-.search input::placeholder{color:#c3b3b6}
-.go{background:var(--red);color:#fff;border:none;font-family:inherit;font-weight:700;font-size:14px;padding:11px 22px;border-radius:11px;cursor:pointer;transition:.15s}
-.go:hover{background:var(--red-deep)}
+.search input::placeholder{color:#aaa8a0}
+.go{background:var(--orange);color:#fff;border:1px solid var(--orange-deep);font-family:inherit;font-weight:800;font-size:14px;padding:11px 22px;border-radius:6px;cursor:pointer;transition:.15s}
+.go:hover{background:var(--orange-deep)}
 .chips{gap:8px;flex-wrap:wrap;margin-top:22px}
-.chip{padding:8px 15px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-family:inherit;font-weight:600;font-size:13px;color:var(--muted);cursor:pointer;transition:.15s}
-.chip:hover{border-color:var(--pink2);color:var(--ink)}
-.chip.on{background:var(--pink);border-color:var(--red);color:var(--red-deep)}
+.chip{padding:8px 15px;border-radius:6px;border:1px solid var(--line);background:var(--panel);font-family:inherit;font-weight:700;font-size:13px;color:var(--muted);cursor:pointer;transition:.15s}
+.chip:hover{border-color:var(--grey2);color:var(--ink)}
+.chip.on{background:var(--orange-soft);border-color:var(--orange);color:var(--orange-deep)}
 .cols{display:grid;grid-template-columns:1fr 300px;gap:32px;padding:34px 0 80px;align-items:start}
 .barrow{margin-bottom:18px}
 .count{font-size:14px;color:var(--muted)}
 .count b{color:var(--ink);font-weight:700}
 .sort{font-size:13px;font-weight:600;color:var(--muted);border:none;background:none;font-family:inherit;cursor:pointer}
 .list{display:flex;flex-direction:column;gap:14px}
-.job{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;transition:.18s;position:relative}
-.job:hover{border-color:var(--pink2);box-shadow:0 14px 36px -22px rgba(195,58,85,.45);transform:translateY(-2px)}
-.logo{width:48px;height:48px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:19px;color:#fff;flex-shrink:0}
+.job{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:20px 22px;transition:.18s;position:relative}
+.job:hover{border-color:var(--grey2);box-shadow:0 18px 38px -30px rgba(0,0,0,.45);transform:translateY(-2px)}
+.logo{width:48px;height:48px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:19px;color:#fff;flex-shrink:0}
 .jt{font-size:17px;font-weight:700;letter-spacing:-.01em;margin:0;line-height:1.25}
 .co{font-size:13px;color:var(--muted);font-weight:500}
 .fitb{font-size:11px;font-weight:700;padding:5px 11px;border-radius:999px;white-space:nowrap;text-transform:uppercase;letter-spacing:.04em;flex-shrink:0}
-.fit-strong{background:var(--pink);color:var(--red-deep)}
-.fit-good{background:#fbeede;color:#b5722a}
-.fit-maybe{background:#f1eaec;color:#8a7a7d}
-.why{font-size:13.5px;line-height:1.55;color:#5f5052;margin:12px 0 0}
+.fit-strong{background:var(--orange-soft);color:var(--orange-deep)}
+.fit-good{background:#f0f0ea;color:#55534c}
+.fit-maybe{background:#e7e7df;color:#6c6a63}
+.why{font-size:13.5px;line-height:1.55;color:#4f4d47;margin:12px 0 0}
 .meta{gap:16px;flex-wrap:wrap;margin-top:12px}
 .mi{font-size:13px;color:var(--ink);font-weight:500;display:flex;align-items:center;gap:6px}
-.mi .dot{width:5px;height:5px;border-radius:50%;background:var(--pink2)}
+.mi .dot{width:5px;height:5px;border-radius:50%;background:var(--orange)}
 .foot{margin-top:14px}
 .tags{gap:7px;flex-wrap:wrap}
-.tag{font-size:12px;font-weight:600;color:var(--muted);background:var(--bg);border:1px solid var(--line);padding:5px 11px;border-radius:8px}
-.link{font-size:13px;font-weight:700;color:var(--red-deep);text-decoration:none;white-space:nowrap}
+.tag{font-size:12px;font-weight:700;color:var(--muted);background:var(--bg);border:1px solid var(--line);padding:5px 11px;border-radius:6px}
+.link{font-size:13px;font-weight:800;color:var(--orange-deep);text-decoration:none;white-space:nowrap}
 .link:hover{text-decoration:underline}
-.savebtn{border:1px solid var(--line);background:var(--card);width:40px;height:40px;border-radius:12px;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:.15s;flex-shrink:0;color:var(--muted)}
-.savebtn:hover{border-color:var(--red);color:var(--red)}
-.savebtn.on{background:var(--red);border-color:var(--red);color:#fff}
+.savebtn{border:1px solid var(--line);background:var(--card);width:40px;height:40px;border-radius:6px;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:.15s;flex-shrink:0;color:var(--muted)}
+.savebtn:hover{border-color:var(--orange);color:var(--orange)}
+.savebtn.on{background:var(--orange);border-color:var(--orange-deep);color:#fff}
 .heart{position:relative;display:inline-block;width:20px;height:18px;color:inherit;transform:translateY(-1px)}
 .heart::before,.heart::after{content:"";position:absolute;left:10px;top:0;width:10px;height:16px;background:currentColor;border-radius:10px 10px 0 0;transform:rotate(-45deg);transform-origin:0 100%}
 .heart::after{left:0;transform:rotate(45deg);transform-origin:100% 100%}
 .rail{position:sticky;top:92px;display:flex;flex-direction:column;gap:16px}
-.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
-.panel.pink{background:linear-gradient(160deg,var(--pink),#fff);border-color:var(--pink2)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:20px}
+.panel.pink{background:linear-gradient(160deg,var(--orange-soft),#fff);border-color:#ffd3bf}
 .pt{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 12px}
 .cand-name{font-weight:800;font-size:17px;letter-spacing:-.01em}
-.cand-role{font-size:13px;color:var(--red-deep);font-weight:600;margin:3px 0 12px;line-height:1.4}
-.cand-exp{font-size:13px;line-height:1.5;color:#5f5052;margin:0 0 16px}
+.cand-role{font-size:13px;color:var(--orange-deep);font-weight:700;margin:3px 0 12px;line-height:1.4}
+.cand-exp{font-size:13px;line-height:1.5;color:#4f4d47;margin:0 0 16px}
 .stat{display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line)}
 .stat:last-child{border-bottom:none}
 .stat .n{font-weight:800;font-size:17px}
 .stat .lb{font-size:13px;color:var(--muted);font-weight:500}
 .note{font-size:12.5px;line-height:1.5;color:#7a6a6c}
-.note b{color:var(--red-deep)}
+.note b{color:var(--orange-deep)}
 .board{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:34px 0 80px;align-items:start}
-.col-k{background:rgba(255,255,255,.55);border:1px solid var(--line);border-radius:18px;padding:14px;min-height:200px}
+.col-k{background:rgba(255,255,255,.58);border:1px solid var(--line);border-radius:8px;padding:14px;min-height:200px}
 .colhd{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;padding:0 4px}
 .colttl{font-weight:700;font-size:14px;display:flex;align-items:center;gap:8px}
 .cdot{width:9px;height:9px;border-radius:50%}
 .colct{font-size:12px;font-weight:700;color:var(--muted);background:var(--bg);border-radius:999px;padding:2px 9px}
-.tcard{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:13px;margin-bottom:10px;transition:.15s}
-.tcard:hover{box-shadow:0 10px 26px -18px rgba(195,58,85,.5)}
+.tcard{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:13px;margin-bottom:10px;transition:.15s}
+.tcard:hover{box-shadow:0 12px 26px -22px rgba(0,0,0,.5)}
 .tc-co{font-size:12px;color:var(--muted);font-weight:600}
 .tc-jt{font-size:13.5px;font-weight:700;margin:2px 0 10px;line-height:1.3}
 .tmove{display:flex;gap:6px}
-.mvbtn{flex:1;border:1px solid var(--line);background:var(--bg);border-radius:8px;font-family:inherit;font-size:12px;font-weight:600;color:var(--muted);padding:6px;cursor:pointer;transition:.15s;white-space:nowrap}
+.mvbtn{flex:1;border:1px solid var(--line);background:var(--bg);border-radius:6px;font-family:inherit;font-size:12px;font-weight:700;color:var(--muted);padding:6px;cursor:pointer;transition:.15s;white-space:nowrap}
 .mvbtn.bk{flex:0 0 34px}
-.mvbtn:hover{border-color:var(--red);color:var(--red-deep)}
+.mvbtn:hover{border-color:var(--orange);color:var(--orange-deep)}
 .mvbtn:disabled{opacity:.35;cursor:default}
 .empty{text-align:center;color:#c3b3b6;font-size:13px;padding:24px 8px;font-weight:500}
 .emptybig{text-align:center;padding:90px 20px;color:var(--muted)}
 .emptybig h3{font-size:22px;color:var(--ink);margin:0 0 8px;letter-spacing:-.02em}
+@media (max-width: 860px){
+  .wrap{padding:0 20px}
+  .hdin{height:auto;min-height:68px;gap:12px;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}
+  .nav{order:3;width:100%;overflow:auto;padding-bottom:2px}
+  .navlink{white-space:nowrap}
+  .hero{padding-top:34px}
+  .h1{font-size:34px;max-width:none}
+  .search{max-width:none}
+  .cols{grid-template-columns:1fr;gap:22px;padding-top:28px}
+  .rail{position:static}
+  .board{grid-template-columns:1fr 1fr;gap:12px}
+}
+@media (max-width: 560px){
+  .wrap{padding:0 16px}
+  .h1{font-size:30px;line-height:1.08}
+  .sub{font-size:15px}
+  .search{align-items:stretch;flex-wrap:wrap;padding:10px}
+  .search input{min-width:0;flex:1 1 calc(100% - 32px)}
+  .go{width:100%}
+  .job{display:block;padding:18px}
+  .job .logo{margin-bottom:12px}
+  .job>.f1{min-width:0}
+  .job>.savebtn{position:absolute;right:14px;top:14px}
+  .job .foot{align-items:flex-start;flex-direction:column}
+  .job .fx.jb{padding-right:44px}
+  .fitb{margin-top:4px}
+  .board{grid-template-columns:1fr}
+}
 </style>
 </helmet>
-<template id="__bundler_thumbnail"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="22" fill="#ffeef1"/><circle cx="50" cy="57" r="21" fill="#e3637a"/><rect x="44" y="27" width="12" height="10" rx="4" fill="#6fae71"/><circle cx="44" cy="52" r="1.6" fill="#fff"/><circle cx="54" cy="50" r="1.6" fill="#fff"/><circle cx="49" cy="60" r="1.6" fill="#fff"/><circle cx="58" cy="60" r="1.6" fill="#fff"/><circle cx="42" cy="62" r="1.6" fill="#fff"/></svg></template>
+<template id="__bundler_thumbnail"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" rx="12" fill="#f6f6f3"/><rect x="22" y="32" width="56" height="36" rx="7" fill="#ff5a1f" stroke="#171717" stroke-width="4"/><circle cx="37" cy="50" r="7" fill="#fff" stroke="#171717" stroke-width="3"/><rect x="52" y="44" width="17" height="4" fill="#171717"/><rect x="52" y="54" width="17" height="4" fill="#171717"/></svg></template>
 <div class="app">
 <header class="hd"><div class="wrap hdin fx ac jb">
 <div class="fx ac gap10">
-<span class="berry"><span class="berry-l"></span><span class="berry-b"></span><span class="seed" style="left:8px;bottom:11px"></span><span class="seed" style="left:14px;bottom:7px"></span><span class="seed" style="left:11px;bottom:16px"></span><span class="seed" style="left:6px;bottom:5px"></span></span>
-<span class="brand fw8" style="font-weight:800;font-size:20px">ripe</span>
+<span class="device"></span>
+<span class="brand fw8" style="font-weight:800;font-size:20px">motion desk</span>
 </div>
 <nav class="nav fx ac">
 <button class="navlink {{ browseCls }}" onClick="{{ goBrowse }}">Opportunities</button>
@@ -125,11 +152,11 @@ body{margin:0}
 <sc-if value="{{ isBrowse }}" hint-placeholder-val="{{ true }}">
 <div class="wrap">
 <section class="hero">
-<h1 class="h1">{{ firstName }}, find a role that's <em>perfectly ripe</em> for you.</h1>
+<h1 class="h1">{{ firstName }}, keep the right work <em>in motion</em>.</h1>
 <p class="sub">{{ subtitle }}</p>
 <div class="search">
-<span style="color:#c3b3b6;font-size:17px">⌕</span>
-<input placeholder="Search role, clinic, or district…" value="{{ query }}" onInput="{{ onSearch }}"/>
+<span style="color:#aaa8a0;font-size:17px">⌕</span>
+<input placeholder="Search role, studio, brief, or mode..." value="{{ query }}" onInput="{{ onSearch }}"/>
 <button class="go">Search</button>
 </div>
 <div class="chips fx">
@@ -189,7 +216,7 @@ body{margin:0}
 <div class="stat"><span class="lb">Offers</span><span class="n" style="color:var(--leaf)">{{ pOffer }}</span></div>
 </div>
 <div class="panel pink">
-<p class="note">Picks screened against your CV · refreshed <b>{{ updated }}</b> from <b>{{ source }}</b>.</p>
+<p class="note">Motion leads tuned to your direction · refreshed <b>{{ updated }}</b> from <b>{{ source }}</b>.</p>
 </div>
 </aside>
 </div>
@@ -200,7 +227,7 @@ body{margin:0}
 <div class="wrap">
 <section class="hero" style="padding-bottom:0">
 <h1 class="h1" style="font-size:34px">My application tracker</h1>
-<p class="sub">Move each role through your pipeline. Saved opportunities land here automatically.</p>
+<p class="sub">Move each role, studio, or brief through your pipeline. Saved opportunities land here automatically.</p>
 </section>
 <sc-if value="{{ hasTracked }}" hint-placeholder-val="{{ true }}">
 <div class="board">
@@ -234,39 +261,37 @@ class Component extends DCLogic {
   state = { tab:'browse', query:'', types:{}, tracked:{}, data:null, sort:'fit' };
 
   EMBED = `{
-  "title": "Nihal's Opportunities",
-  "subtitle": "Real, current openings for patient coordinator, clinic coordinator and health-tourism roles in Istanbul — pulled from the boards, screened against your CV, and shown so you don't have to dig.",
-  "candidate": {"name":"Nihal Kocaman","headline":"International Sales Manager & Clinic Coordinator","experience":"~2.5 years in Istanbul dental tourism (Ekiz Dental, Swedish Clinic, MayClinik)","languages":["English","Turkish"],"strengths":["international patient management","English medical interpretation","CRM & reporting","pricing/sales","team leadership & recruitment","influencer/celebrity patient relations"]},
-  "snapshot_date": "2026-06-25",
-  "source": "dentalilan.com",
+  "title": "Motion Opportunities",
+  "subtitle": "A focused motion-design radar for roles, studios, and briefs that fit your taste for sharp systems, playful interaction, product storytelling, and polished moving images.",
+  "candidate": {"name":"Pedro Sousa","headline":"Motion Designer & Creative Systems Thinker","experience":"Motion design, visual systems, product storytelling, interactive prototypes, and brand-led digital work.","languages":["English","Portuguese"],"strengths":["motion design","art direction","visual systems","product storytelling","creative technology","editing & compositing","AI-assisted workflows"]},
+  "snapshot_date": "2026-06-30",
+  "source": "motion design studio targets, product teams, creative technology leads",
   "jobs": [
-    {"title":"İngilizce bilen satış uzmanı & yabancı hasta koordinatörü","clinic":"Dental clinic — Nişantaşı","district":"Şişli, İstanbul","posted":"2026-04-28","lang":"English","fit":"strong","why":"Bullseye — this is basically your job title. English foreign-patient coordinator + sales, first contact through aftercare. You did exactly this at Ekiz Dental and MayClinik. Central, near past roles.","url":"https://dentalilan.com/isveren-ilanlari/saglik-turizmi-tercumani-araniyor/ingilizce-bilen-satis-uzmani-araniyor-384833"},
-    {"title":"Klinik Müdürü — Diş Sağlığı & Sağlık Turizmi","clinic":"Gaia Dental Clinic","district":"Kağıthane, İstanbul","posted":"2026-06-20","lang":"","fit":"strong","why":"A genuine step up you are qualified for — dental + health tourism management. Your CV shows operations, team leadership, recruitment and pricing. Convenient side, recent post.","url":"https://dentalilan.com/isveren-ilanlari/klinik-yoneticisi-koordinatoru-araniyor/klinik-muduru-ariyoruz-391786"},
-    {"title":"Sağlık Turizmi Uzmanı (Health Tourism Specialist)","clinic":"Şengel Klinik","district":"Şişli / Bomonti, İstanbul","posted":"2026-06-02","lang":"English or Russian","fit":"strong","why":"They want a Turkish citizen with strong English in dental health tourism, salary + commission — all fits you. English alone satisfies it (Russian optional). Central Şişli.","url":"https://dentalilan.com/isveren-ilanlari/saglik-turizmi-tercumani-araniyor/sengel-klinik-saglik-turizmi-uzmani-ariyoristanbul-sisli-bomonti-389251"},
-    {"title":"İngilizce bilen Sağlık Turizmi Tercümanı / Koordinatör","clinic":"Atamer Sağlık Hizmetleri (4 branches)","district":"Tuzla, İstanbul","posted":"2026-05-19","lang":"English","fit":"good","why":"Interpreter + coordinator combo is exactly their ask; 4-branch group means room to grow. Catch: Tuzla is far (Asian side) vs. your past Sarıyer/Şişli roles.","url":"https://dentalilan.com/isveren-ilanlari/saglik-turizmi-tercumani-araniyor/ingilizce-bilen-saglik-turizmi-tercumani-araniyor-387886"},
-    {"title":"Sağlık Turizmi Satış Danışmanı","clinic":"Health tourism firm","district":"Esenyurt, İstanbul","posted":"2026-05-23","lang":"English","fit":"good","why":"Matches your sales + CRM + lead-management strengths. Sales-leaning rather than full coordination, and Esenyurt is far west — solid backup.","url":"https://dentalilan.com/isveren-ilanlari/saglik-turizmi-tercumani-araniyor/saglik-turizmi-satis-danismanlari-araniyor-388404"},
-    {"title":"Klinik Yöneticisi","clinic":"Dentram Diş Kliniği","district":"Beşiktaş, İstanbul","posted":"2026-04-15","lang":"","fit":"good","why":"Established, well-known clinic in a prime central district — strong CV name. General management rather than international-focused, so it leans on your operations/leadership side.","url":"https://dentalilan.com/isveren-ilanlari/klinik-yoneticisi-koordinatoru-araniyor/dis-klinigine-klinik-yoneticisi-araniyor-382349"},
-    {"title":"Klinik Yöneticisi","clinic":"Dr. Çınar Gaffaroğlu Diş Kliniği (Global Group)","district":"Kağıthane, İstanbul","posted":"2026-06-24","lang":"","fit":"good","why":"Recent, convenient side. Management weighted to operations, purchasing and stock — fits your clinic-ops experience, lighter on the international/English angle.","url":"https://dentalilan.com/isveren-ilanlari/klinik-yoneticisi-koordinatoru-araniyor/klinik-yoneticisi-araniyor-392204"},
-    {"title":"Klinik Koordinatörü","clinic":"Dentasay Diş Klinikleri","district":"Sancaktepe, İstanbul","posted":"2026-06-25","lang":"","fit":"good","why":"Newest on the board and a clean coordinator match. Not flagged international (English is upside, not required), and Sancaktepe is far on the Asian side.","url":"https://dentalilan.com/isveren-ilanlari/klinik-yoneticisi-koordinatoru-araniyor/klinik-koordinatoru-araniyor-392351"},
-    {"title":"Rusça & İngilizce bilen health-tourism personnel","clinic":"STR DENT","district":"Zeytinburnu, İstanbul","posted":"2026-06-16","lang":"Russian + English","fit":"maybe","why":"Right kind of role, but they prioritise Russian, which is not on your CV. Only worth it if you have some Russian.","url":"https://dentalilan.com/isveren-ilanlari/saglik-turizmi-tercumani-araniyor/rusca-ingilizce-bilen-personel-araniyor-391213"},
-    {"title":"İngilizce Tercüman — Sağlık Turizmi","clinic":"Health tourism firm","district":"Bakırköy, İstanbul","posted":"2026-05-05","lang":"English","fit":"maybe","why":"A step down — pure interpreting, below your manager/coordinator level and likely pay. Fallback only.","url":"https://dentalilan.com/isveren-ilanlari/saglik-turizmi-tercumani-araniyor/tercuman-araniyor-385860"}
+    {"title":"Senior Motion Designer","clinic":"Product design team","district":"Remote / Europe","posted":"2026-06-30","lang":"English","mode":"Remote","fit":"strong","why":"This is the cleanest fit: high-craft motion for product moments, launches, explainers, and interface storytelling. It lines up with your eye for systems, timing, clarity, and work that feels designed rather than merely decorated.","url":"https://www.linkedin.com/jobs/search/?keywords=senior%20motion%20designer%20remote%20europe"},
+    {"title":"Motion Designer - Brand Systems","clinic":"Brand studio","district":"London / Remote","posted":"2026-06-30","lang":"English","mode":"Hybrid","fit":"strong","why":"A strong direction if you want motion to sit inside identity systems: kinetic type, launch films, social packages, and design rules that can scale. Your taste for precise visual language makes this worth prioritising.","url":"https://www.linkedin.com/jobs/search/?keywords=motion%20designer%20brand%20systems%20london"},
+    {"title":"Creative Technologist - Motion Prototypes","clinic":"Digital product studio","district":"Remote","posted":"2026-06-30","lang":"English","mode":"Remote","fit":"strong","why":"This is a compelling lane when motion, interaction, and prototypes overlap. It gives you space to build tactile interface ideas, AI-assisted experiments, and expressive product demos without being boxed into pure video output.","url":"https://www.linkedin.com/jobs/search/?keywords=creative%20technologist%20motion%20prototype%20remote"},
+    {"title":"Motion Designer - Social & Launch Content","clinic":"Consumer technology brand","district":"Europe","posted":"2026-06-30","lang":"English","mode":"Hybrid","fit":"good","why":"Good fit for polished campaign assets, product reveals, and short-form storytelling. It may move faster and more content-heavy than studio work, but the product-design sensibility is close to your requested direction.","url":"https://www.linkedin.com/jobs/search/?keywords=motion%20designer%20consumer%20technology%20europe"},
+    {"title":"Design Animator - UI Motion","clinic":"SaaS / product company","district":"Remote","posted":"2026-06-30","lang":"English","mode":"Remote","fit":"good","why":"Useful if you want motion to sharpen product comprehension: onboarding, microinteractions, feature demos, and UI narratives. It is a little more product-functional than expressive, but it can build a strong portfolio bridge.","url":"https://www.linkedin.com/jobs/search/?keywords=ui%20motion%20designer%20remote"},
+    {"title":"Motion Graphics Designer - Editorial Video","clinic":"Media / content studio","district":"London / Remote","posted":"2026-06-30","lang":"English","mode":"Hybrid","fit":"good","why":"A practical match for title sequences, explainers, lower thirds, templates, and fast visual storytelling. It is less brand-system led, but it keeps your craft visible and improves your reel quickly.","url":"https://www.linkedin.com/jobs/search/?keywords=motion%20graphics%20designer%20editorial%20video%20london"},
+    {"title":"3D Motion Designer","clinic":"Experimental design studio","district":"Remote / Europe","posted":"2026-06-30","lang":"English","mode":"Remote","fit":"maybe","why":"Interesting stretch if you want to lean harder into product objects, spatial scenes, and tactile renders. Treat this as a maybe unless the role values design judgement as much as deep 3D production.","url":"https://www.linkedin.com/jobs/search/?keywords=3d%20motion%20designer%20remote%20europe"},
+    {"title":"Freelance Motion Design Briefs","clinic":"Selective direct clients","district":"Remote","posted":"2026-06-30","lang":"English","mode":"Remote","fit":"maybe","why":"Good as a parallel track for brand films, launch kits, and product explainers while you refine the main portfolio. Keep it selective so the work compounds toward the motion-design identity you actually want.","url":"https://www.yuno.co/jobs?search=motion%20designer"}
   ]
 }`;
 
   stages = [
-    {key:'saved', label:'Saved', color:'#e3637a'},
-    {key:'applied', label:'Applied', color:'#d98a3d'},
-    {key:'interview', label:'Interview', color:'#7a6fae'},
-    {key:'offer', label:'Offer', color:'#6fae71'},
+    {key:'saved', label:'Saved', color:'#ff5a1f'},
+    {key:'applied', label:'Applied', color:'#171717'},
+    {key:'interview', label:'Interview', color:'#8f8d84'},
+    {key:'offer', label:'Offer', color:'#6d9f71'},
   ];
 
   fitMeta = {
-    strong:{label:'Ripe pick', cls:'fit-strong', color:'#e3637a', order:0},
-    good:{label:'Good match', cls:'fit-good', color:'#d98a3d', order:1},
-    maybe:{label:'Maybe', cls:'fit-maybe', color:'#b8a9ac', order:2},
+    strong:{label:'High signal', cls:'fit-strong', color:'#ff5a1f', order:0},
+    good:{label:'Good fit', cls:'fit-good', color:'#171717', order:1},
+    maybe:{label:'Explore', cls:'fit-maybe', color:'#8f8d84', order:2},
   };
 
-  filterDefs = ['Ripe picks','Good match','Maybe','Speaks English','Remote','Hybrid','On-site'];
+  filterDefs = ['High signal','Good fit','Explore','Speaks English','Remote','Hybrid','On-site'];
 
   componentDidMount(){
     let init;
@@ -301,9 +326,9 @@ class Component extends DCLogic {
     const q = this.state.query.trim().toLowerCase();
     if (q && !([j.title, j.clinic, j.district, j.why].join(' ').toLowerCase().includes(q))) return false;
     const fitSel = [];
-    if (this.state.types['Ripe picks']) fitSel.push('strong');
-    if (this.state.types['Good match']) fitSel.push('good');
-    if (this.state.types['Maybe']) fitSel.push('maybe');
+    if (this.state.types['High signal']) fitSel.push('strong');
+    if (this.state.types['Good fit']) fitSel.push('good');
+    if (this.state.types['Explore']) fitSel.push('maybe');
     if (fitSel.length && !fitSel.includes(j.fit)) return false;
     if (this.state.types['Speaks English'] && !/english/i.test(j.lang || '')) return false;
     const modeSel = ['Remote','Hybrid','On-site'].filter(m => this.state.types[m]);
@@ -355,7 +380,7 @@ class Component extends DCLogic {
       goBrowse:()=>this.setTab('browse'), goTrack:()=>this.setTab('tracker'),
       trackBadge: total ? `(${total})` : '',
       title: data.title, subtitle: data.subtitle, initials,
-      firstName: (c.name || '').split(' ')[0] || 'Nihal',
+      firstName: (c.name || '').split(' ')[0] || 'Pedro',
       query:this.state.query, onSearch:e=>this.onSearch(e), filters,
       jobs, count: jobs.length, noJobs: jobs.length === 0,
       toggleSort: () => this.toggleSort(),
